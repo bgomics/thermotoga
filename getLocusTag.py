@@ -11,12 +11,14 @@
 ###           storage is ever changed
 
 def getLocusTag(giNumber):
+	from Bio import Entrez
+	Entrez.email = "bgomics@gmail.com"
     dbfetch = Entrez.efetch(db = "protein", id = giNumber, rettype = "gb", retstyle = "xml")
     dbread = dbfetch.read()
 
     if dbread.find('locus_tag') == -1:
 
-        locusTag = "Error: No Locus Tag Found"
+        locusTag = "Error"
 
     else:
 
