@@ -1,6 +1,9 @@
-#*************************************************************
-#
-#*************************************************************
+### Function Name: setblast
+### Expected Input: sequence for blast search ,organism name for entrez filtering.
+### Processing: BLast search is performed using qblast form biopython.
+### Output: None.
+### Author: Nyonyi,Richard.
+
 def setblast(_sequence,eq_name):
 	from Bio.Blast import NCBIWWW
 	from Bio import SeqIO

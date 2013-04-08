@@ -5,13 +5,12 @@
 ### Output: The GI Number of the given alignment
 ### Author: Newmister, Jacob
 ### Comments: the hitID is assumed to be in the form x|(GINUMBERHERE)|ETC.
-###           edits may be necissary if this system ever changes.
+###           edits may be necessary if this system ever changes.
 
 
 def getGInumber(hitID):
     giParse = hitID[3:12]
     if giParse.find('|') == -1:
-        giParse = "error"
         return giParse
 
     else:
