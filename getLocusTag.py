@@ -13,15 +13,15 @@
 def getLocusTag(giNumber):
 	from Bio import Entrez
 	Entrez.email = "bgomics@gmail.com"
-    dbfetch = Entrez.efetch(db = "protein", id = giNumber, rettype = "gb", retstyle = "xml")
-    dbread = dbfetch.read()
+	dbfetch = Entrez.efetch(db = "protein", id = giNumber, rettype = "gb", retstyle = "xml")
+	dbread = dbfetch.read()
 
-    if dbread.find('locus_tag') == -1:
+	if dbread.find('locus_tag') == -1:
+		locusTag = "Error"
 
-        locusTag = "Error"
+	else:
+		locusTag = dbread[dbread.find("locus_tag")+11:]
+		locusTag = locusTag[:locusTag.find("\"")]
 
-    else:
-
-        locusTag = dbread[dbread.find("locus_tag")+11:dbread.find("locus_tag")+19]
-
-    return locusTag
+	print dbread
+	return locusTag
