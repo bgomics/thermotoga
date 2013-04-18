@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 05, 2013 at 08:41 PM
+-- Generation Time: Apr 18, 2013 at 03:40 PM
 -- Server version: 5.1.44
 -- PHP Version: 5.3.1
 
@@ -26,17 +26,12 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 --
 
 CREATE TABLE IF NOT EXISTS `elfii` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `RQ7id` int(11) NOT NULL,
+  `row` int(11) NOT NULL AUTO_INCREMENT,
+  `RQ7identity` varchar(20) NOT NULL,
   `locus` text NOT NULL,
   `gi` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`row`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
---
--- Dumping data for table `elfii`
---
-
 
 -- --------------------------------------------------------
 
@@ -45,17 +40,12 @@ CREATE TABLE IF NOT EXISTS `elfii` (
 --
 
 CREATE TABLE IF NOT EXISTS `hypogea` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `RQ7id` int(11) NOT NULL,
+  `row` int(11) NOT NULL AUTO_INCREMENT,
+  `RQ7identity` varchar(20) NOT NULL,
   `locus` text NOT NULL,
   `gi` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`row`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
---
--- Dumping data for table `hypogea`
---
-
 
 -- --------------------------------------------------------
 
@@ -64,17 +54,12 @@ CREATE TABLE IF NOT EXISTS `hypogea` (
 --
 
 CREATE TABLE IF NOT EXISTS `lettingae` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `RQ7id` int(11) NOT NULL,
+  `row` int(11) NOT NULL AUTO_INCREMENT,
+  `RQ7identity` varchar(20) NOT NULL,
   `locus` text NOT NULL,
   `gi` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
---
--- Dumping data for table `lettingae`
---
-
+  PRIMARY KEY (`row`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=23 ;
 
 -- --------------------------------------------------------
 
@@ -83,17 +68,12 @@ CREATE TABLE IF NOT EXISTS `lettingae` (
 --
 
 CREATE TABLE IF NOT EXISTS `maritima` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `RQ7id` int(11) NOT NULL,
+  `row` int(11) NOT NULL AUTO_INCREMENT,
+  `RQ7identity` varchar(20) NOT NULL,
   `locus` text NOT NULL,
   `gi` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
---
--- Dumping data for table `maritima`
---
-
+  PRIMARY KEY (`row`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=24 ;
 
 -- --------------------------------------------------------
 
@@ -102,17 +82,12 @@ CREATE TABLE IF NOT EXISTS `maritima` (
 --
 
 CREATE TABLE IF NOT EXISTS `naphthophila` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `RQ7id` int(11) NOT NULL,
+  `row` int(11) NOT NULL AUTO_INCREMENT,
+  `RQ7identity` varchar(20) NOT NULL,
   `locus` text NOT NULL,
   `gi` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
---
--- Dumping data for table `naphthophila`
---
-
+  PRIMARY KEY (`row`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
 
 -- --------------------------------------------------------
 
@@ -121,17 +96,12 @@ CREATE TABLE IF NOT EXISTS `naphthophila` (
 --
 
 CREATE TABLE IF NOT EXISTS `neapolitana` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `RQ7id` int(11) NOT NULL,
+  `row` int(11) NOT NULL AUTO_INCREMENT,
+  `RQ7identity` varchar(20) NOT NULL,
   `locus` text NOT NULL,
   `gi` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=105 ;
-
---
--- Dumping data for table `neapolitana`
---
-
+  PRIMARY KEY (`row`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
 
 -- --------------------------------------------------------
 
@@ -140,17 +110,12 @@ CREATE TABLE IF NOT EXISTS `neapolitana` (
 --
 
 CREATE TABLE IF NOT EXISTS `petrophila` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `RQ7id` int(11) NOT NULL,
+  `row` int(11) NOT NULL AUTO_INCREMENT,
+  `RQ7identity` varchar(20) NOT NULL,
   `locus` text NOT NULL,
   `gi` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
---
--- Dumping data for table `petrophila`
---
-
+  PRIMARY KEY (`row`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
 
 -- --------------------------------------------------------
 
@@ -159,26 +124,10 @@ CREATE TABLE IF NOT EXISTS `petrophila` (
 --
 
 CREATE TABLE IF NOT EXISTS `RQ7` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `identity` text NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
-
---
--- Dumping data for table `RQ7`
---
-
-INSERT INTO `RQ7` (`id`, `identity`) VALUES
-(1, 'gRQ7GL000001'),
-(2, 'gRQ7GL000160'),
-(4, 'gRQ7GL000566'),
-(3, 'gRQ7GL000319'),
-(5, 'gRQ7GL000983'),
-(6, 'gRQ7GL001172 '),
-(7, 'gRQ7GL001341  '),
-(8, 'gRQ7GL001630'),
-(9, 'gRQ7GL001868'),
-(10, 'gRQ7GL001768');
+  `row` int(11) NOT NULL,
+  `identity` varchar(20) NOT NULL,
+  PRIMARY KEY (`identity`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -187,17 +136,12 @@ INSERT INTO `RQ7` (`id`, `identity`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `subterranea` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `RQ7id` int(11) NOT NULL,
+  `row` int(11) NOT NULL AUTO_INCREMENT,
+  `RQ7identity` varchar(20) NOT NULL,
   `locus` text NOT NULL,
   `gi` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`row`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
---
--- Dumping data for table `subterranea`
---
-
 
 -- --------------------------------------------------------
 
@@ -206,14 +150,9 @@ CREATE TABLE IF NOT EXISTS `subterranea` (
 --
 
 CREATE TABLE IF NOT EXISTS `thermarum` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `RQ7id` int(11) NOT NULL,
+  `row` int(11) NOT NULL AUTO_INCREMENT,
+  `RQ7identity` varchar(20) NOT NULL,
   `locus` text NOT NULL,
   `gi` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
---
--- Dumping data for table `thermarum`
---
-
+  PRIMARY KEY (`row`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;

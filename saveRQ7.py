@@ -14,11 +14,11 @@ def saveRQ7(list,_logFile):
 	try:
  		cnx = mysql.connector.connect(user='username here', password='pasword here',host='host',database='Genomes')
 		cursor = cnx.cursor()
-		_sql = ("INSERT INTO RQ7 (id,identity) "  
+		_sql = ("INSERT INTO RQ7 (row,identity) "  
 		"VALUES (%s,%s)")
  
 		for c in range (len(list)):
-			_name=list[c].id
+			_name=list[c].id	#getting the Identity attribute in the list
 			_data=(c+1,_name)
 			cursor.execute(_sql, _data)
 		cnx.commit()

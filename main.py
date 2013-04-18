@@ -24,7 +24,7 @@ _list=[] #list for names of organisms
 _list.append('Thermotoga maritima')
 _list.append('Thermotoga neapolitana')
 _list.append('Thermotoga elfii')
-_list.append('Thermotoga hypogea')
+#_list.append('Thermotoga hypogea')  # No data  available in the NCBI database
 _list.append('Thermotoga lettingae')
 _list.append('Thermotoga naphthophila')
 _list.append('Thermotoga petrophila')
@@ -38,7 +38,7 @@ _list.append('Thermotoga thermarum')
 _logFile = open("log.txt", "a")
 
 
-_file="RQ7.fasta"     #Fasta file for the organism we want to find matches
+_file="oldRQ7.fasta"     #Fasta file for the organism we want to find matches
 
 handle = open(_file , "rU")				      #opening the fasta file
 _records = list(SeqIO.parse(handle, "fasta")) #parsing the file to a list 
@@ -46,18 +46,19 @@ handle.close()
 
 _totalGenes =len(_records) # counting total number of genes in the  file.
 
-saveRQ7(_records,_logFile )        #save the genes to the database.
+
+#saveRQ7(_records,_logFile )        #save the genes to the database.
 
 
 
 for organism in range(len(_list)):				    	#for all organisms to compare with.
 	
 	_resultFile = open("tempResults.txt", "w")      	#file for storing temporary results before saving to database:
-	_geneCounter=1
-	_geneLimit=3
+	
+	
 	for genes in range(_totalGenes):  #for all records in the fasta file
-		print "gene number " , _geneCounter;
 		
+	
 		setblast(_records[genes].seq,_list[organism])# Sending the sequence and organism to compare with.
 		
 		result_handle = open("my_blast.xml") #Fetching results from xml file
@@ -82,20 +83,10 @@ for organism in range(len(_list)):				    	#for all organisms to compare with.
 					
 				else:	
 					
-					_resultFile.write(str(_geneCounter) +" "+ str(_giNumber) +" "+ str(_locusResult) + '\n');	 #writing the results to a temp file
-		if _geneCounter == _totalGenes:
-			
-			dbsave(_list[organism],_logFile)      #Saving results into the specified database table
-			_logFile.write("Saved all genes corresponding  to " + _list[organism] + '\n');
-			_resultFile.close
-		elif _geneCounter ==_geneLimit:
-			print" _geneCounter ==_geneLimit:";
-			
-			dbsave(_list[organism],_logFile)      #Saving results into the specified database table
-			_logFile.write("Saved 50 genes corresponding  to " + _list[organism] + '\n');
-			_geneLimit = _geneLimit + 3
-			_resultFile.close
-			_resultFile = open("tempResults.txt", "w") 
-		_geneCounter=_geneCounter + 1
-	_resultFile.close	
-_logFile.close
+					_resultFile.write(str(_records[genes].id) +" "+ str(_giNumber) +" "+ str(_locusResult) + '\n');	 #writing the results to a temp file
+		
+	_resultFile.close()	
+	print "saving"
+	dbsave(_list[organism],_logFile)      #Saving results into the specified database table
+	_logFile.write("Saved all genes corresponding  to " + _list[organism] + '\n');
+_logFile.close()

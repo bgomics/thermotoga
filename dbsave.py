@@ -19,7 +19,7 @@ def dbsave(organism,_logFile):
  		name=organism.split()   #splitting organism name to obtain the second word.i.e from(thermotoga xxxxxxx) to only xxxxxxxx
  		tableName=name[1]
  		
- 		_sql = ("INSERT INTO " + tableName + "(RQ7id,gi,locus) " 
+ 		_sql = ("INSERT INTO " + tableName + "(RQ7identity,gi,locus) " 
  		"VALUES (%s,%s,%s)")
  	
  		_rq7id =[]
