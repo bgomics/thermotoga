@@ -1,0 +1,125 @@
+No locus for   490183785
+No locus for   29726923
+No locus for   16975331
+No locus for   1772607
+No locus for   1197391
+No locus for   254839310
+No locus for   254839312
+No locus for   379318473
+No locus for   490184704
+No locus for   490183861
+No locus for   99031960
+No locus for   99031961
+No locus for   2052278
+No locus for   158430734
+No locus for   490183687
+No locus for   22218816
+No locus for   1054862
+No locus for   20150090
+No locus for   3980232
+No locus for   22218819
+No locus for   490184129
+No locus for   600087
+No locus for   490183785
+No locus for   29726923
+No locus for   16975331
+No locus for   1772607
+No locus for   2052278
+No locus for   158430734
+No locus for   490183687
+No locus for   490183785
+No locus for   29726923
+No locus for   16975331
+No locus for   1772607
+No locus for   2052278
+No locus for   158430734
+No locus for   490183687
+Saved all genes corresponding  to Thermotoga maritima
+No locus for   7152049
+No locus for   229544771
+Saved all genes corresponding  to Thermotoga neapolitana
+Saved all genes corresponding  to Thermotoga elfii
+Saved all genes corresponding  to Thermotoga lettingae
+Saved all genes corresponding  to Thermotoga naphthophila
+Saved all genes corresponding  to Thermotoga petrophila
+Saved all genes corresponding  to Thermotoga subterranea
+Saved all genes corresponding  to Thermotoga thermarum
+No locus for   490183785
+No locus for   29726923
+No locus for   16975331
+No locus for   1772607
+No locus for   2052278
+No locus for   158430734
+No locus for   490183687
+Saved all genes corresponding  to Thermotoga maritima
+No locus for   7152049
+No locus for   229544771
+Saved all genes corresponding  to Thermotoga neapolitana
+Saved all genes corresponding  to Thermotoga elfii
+Saved all genes corresponding  to Thermotoga lettingae
+Saved all genes corresponding  to Thermotoga naphthophila
+Saved all genes corresponding  to Thermotoga petrophila
+Saved all genes corresponding  to Thermotoga subterranea
+Saved all genes corresponding  to Thermotoga thermarum
+No locus for   490183785
+No locus for   29726923
+No locus for   16975331
+No locus for   1772607
+No locus for   2052278
+No locus for   158430734
+No locus for   490183687
+Saved all genes corresponding  to Thermotoga maritima
+No locus for   7152049
+No locus for   229544771
+Saved all genes corresponding  to Thermotoga neapolitana
+2003: Can't connect to MySQL server on 'host' (getaddrinfo failed)No locus for   490183785
+No locus for   29726923
+No locus for   16975331
+No locus for   1772607
+No locus for   2052278
+No locus for   158430734
+Saved all genes corresponding  to Thermotoga maritima
+No locus for   7152049
+No locus for   229544771
+Saved all genes corresponding  to Thermotoga neapolitana
+Saved all genes corresponding  to Thermotoga elfii
+Saved all genes corresponding  to Thermotoga lettingae
+Saved all genes corresponding  to Thermotoga naphthophila
+Saved all genes corresponding  to Thermotoga petrophila
+Saved all genes corresponding  to Thermotoga subterranea
+Saved all genes corresponding  to Thermotoga thermarum
+ Data RQ7 was successfully saved 
+No locus for   490183785
+No locus for   29726923
+No locus for   16975331
+No locus for   1772607
+No locus for   2052278
+No locus for   158430734
+Saved all genes corresponding  to Thermotoga maritima
+No locus for   7152049
+No locus for   229544771
+Saved all genes corresponding  to Thermotoga neapolitana
+Saved all genes corresponding  to Thermotoga elfii
+Saved all genes corresponding  to Thermotoga lettingae
+Saved all genes corresponding  to Thermotoga naphthophila
+Saved all genes corresponding  to Thermotoga petrophila
+Saved all genes corresponding  to Thermotoga subterranea
+Saved all genes corresponding  to Thermotoga thermarum
+ Data RQ7 was successfully saved 
+Saved all genes corresponding  to Thermotoga naphthophila
+Saved all genes corresponding  to Thermotoga petrophila
+1062 (23000): Duplicate entry 'gRQ7GL000002' for key 'PRIMARY' Data RQ7 was successfully saved 
+Saved all genes corresponding  to Thermotoga naphthophila
+1062 (23000): Duplicate entry 'gRQ7GL000002' for key 'PRIMARY'Saved all genes corresponding  to Thermotoga naphthophila
+1062 (23000): Duplicate entry 'gRQ7GL000002' for key 'PRIMARY'No locus for   490183785
+No locus for   29726923
+No locus for   16975331
+No locus for   1772607
+No locus for   2052278
+No locus for   158430734
+Saved all genes corresponding  to Thermotoga maritima
+No locus for   7152049
+No locus for   229544771
+Saved all genes corresponding  to Thermotoga neapolitana
+Saved all genes corresponding  to Thermotoga elfii
+Saved all genes corresponding  to Thermotoga lettingae

@@ -12,7 +12,7 @@ def saveRQ7(list,_logFile):
 	from mysql.connector import errorcode
 
 	try:
- 		cnx = mysql.connector.connect(user='username here', password='pasword here',host='host',database='Genomes')
+ 		cnx = mysql.connector.connect(user='root', password='BGOmics',host='localhost',database='xu_test_2')
 		cursor = cnx.cursor()
 		_sql = ("INSERT INTO RQ7 (row,identity) "  
 		"VALUES (%s,%s)")

@@ -5,7 +5,7 @@
 ### Output: None.Errors in log.
 ### Requirements: importing mysql connector.            
 ### Author: Nyonyi,Richard
-### Comments : Make sure  the login credentials for the database-Genomes are set to reflect your database.(line 19)           
+### Comments : Make sure  the login credentials for the database-Genomes are set to reflect your database.(line 16)           
 
 
 #!/usr/bin/env python
@@ -13,7 +13,8 @@ def dbsave(organism,_logFile):
 	import mysql.connector
 	from mysql.connector import errorcode
 	try:
-		cnx = mysql.connector.connect(user='', password='',host='',database='')
+                #my_database = raw_input ("Which database to save the data?")
+		cnx = mysql.connector.connect(user='root', password='BGOmics',host='localhost',database='xu_test_2')
  		cursor = cnx.cursor()
  		
  		name=organism.split()   #splitting organism name to obtain the second word.i.e from(thermotoga xxxxxxx) to only xxxxxxxx

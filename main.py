@@ -38,7 +38,7 @@ _list.append('Thermotoga thermarum')
 _logFile = open("log.txt", "a")
 
 
-_file="oldRQ7.fasta"     #Fasta file for the organism we want to find matches
+_file="Xu_test.fasta"     #Fasta file for the organism we want to find matches
 
 handle = open(_file , "rU")				      #opening the fasta file
 _records = list(SeqIO.parse(handle, "fasta")) #parsing the file to a list 
@@ -47,7 +47,7 @@ handle.close()
 _totalGenes =len(_records) # counting total number of genes in the  file.
 
 
-#saveRQ7(_records,_logFile )        #save the genes to the database.
+saveRQ7(_records,_logFile )        #save the genes to the database.
 
 
 
