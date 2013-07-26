@@ -17,19 +17,38 @@ from getGInumber import getGInumber
 from getLocusTag import getLocusTag
 from getQCoverage import getQCoverage
 from dbsave import dbsave
+
+
+
 _list=[] #list for names of organisms 
+_refSeq=[] # list that contains the NCBI Reference Sequence numbers
 
 # adding organisms to the list
-
 _list.append('Thermotoga maritima')
+_refSeq.append('NC_021214.1,NC_000853.1')
+
 _list.append('Thermotoga neapolitana')
-_list.append('Thermotoga elfii')
-#_list.append('Thermotoga hypogea')  # No data  available in the NCBI database
+_refSeq.append('NC_011978.1')
+
 _list.append('Thermotoga lettingae')
+_refSeq.append('NC_009828.1')
+
 _list.append('Thermotoga naphthophila')
+_refSeq.append('NC_013642.1')
+
 _list.append('Thermotoga petrophila')
-_list.append('Thermotoga subterranea')
+_refSeq.append('NC_009486.1')
+
 _list.append('Thermotoga thermarum')
+_refSeq.append('NC_015707.1')
+
+# No data  available in the NCBI database
+#_list.append('Thermotoga subterranea')
+#_list.append('Thermotoga hypogea')  
+#_list.append('Thermotoga elfii')
+
+
+
 
 
 
@@ -59,7 +78,7 @@ for organism in range(len(_list)):				    	#for all organisms to compare with.
 	for genes in range(_totalGenes):  #for all records in the fasta file
 		
 	
-		setblast(_records[genes].seq,_list[organism])# Sending the sequence and organism to compare with.
+		setblast(_records[genes].seq, _refSeq[organism])# Sending the sequence and reference sequence to compare with.
 		
 		result_handle = open("my_blast.xml") #Fetching results from xml file
 		
